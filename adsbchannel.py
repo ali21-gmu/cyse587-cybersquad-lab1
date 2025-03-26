@@ -84,5 +84,5 @@ class ADSBChannel:
         corrupted_message = message.copy()
         corrupted_message['latitude'] += random.uniform(-0.0001, 0.0001)
         corrupted_message['longitude'] += random.uniform(-0.0001, 0.0001)
-        corrupted_message['altitude'] += random.uniform(-0.01, 0.01)
+        corrupted_message['altitude'] += random.uniform(-0.1, 0.1)
         return corrupted_message

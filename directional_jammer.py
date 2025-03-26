@@ -3,12 +3,12 @@ import time
 import numpy as np
 
 class DirJammer:
-    def __init__(self, jamming_probability, noise_intensity, jamming_power_dbm=-70):
+    def __init__(self, jamming_probability, noise_intensity, jamming_center=(38.8977, -77.0365), jamming_radius=0.0, jamming_power_dbm=-70):
         self.jamming_probability = jamming_probability
         self.noise_intensity = noise_intensity  # Higher value increases interference
         self.jamming_power_dbm = jamming_power_dbm  # Default jamming signal power in dBm
-        self.jamming_center = (38.8977, -77.0365)
-        self.jamming_radius = 0.01
+        self.jamming_center = jamming_center   # Default location: White House
+        self.jamming_radius = jamming_radius
 
     def jam_signal(self, message):
         # Check if the drone is within the jamming area

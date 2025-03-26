@@ -39,7 +39,7 @@ drones = [
 
 # Initialize communication channel and Directional Jammer
 channel = ADSBChannel()
-jammer = Jammer(jamming_probability=0.0, noise_intensity=0.1, jamming_center=(38.8977, -77.0365), jamming_radius=0.01)  # Directional jamming effect
+jammer = Jammer(jamming_probability=0.3, noise_intensity=0.1, jamming_center=(38.8977, -77.0365), jamming_radius=0.015)  # Directional jamming effect
 
 # Create 3D plot
 fig = plt.figure()
@@ -92,6 +92,7 @@ def update(frame):
             # Check if the drone is within the jamming area
             distance = np.sqrt((original_message['latitude'] - jammer.jamming_center[0])**2 + 
                                (original_message['longitude'] - jammer.jamming_center[1])**2)
+            print(distance)
             if distance <= jammer.jamming_radius:
                 jammed_message, is_jammed = jammer.jam_signal(original_message)
                 if is_jammed:
