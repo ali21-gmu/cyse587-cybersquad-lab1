@@ -74,7 +74,7 @@ pip install contourpy cycler fonttools kiwisolver matplotlib numpy packaging pan
 ```
 
 ### Run the Stats File
-Now run the n_scen_stat.py file to get the results of running all the attak simulations
+Now run the n_scen_stat.py file to get the results of running all the attack simulations
 
 ```
 python n_scen_stat.py
