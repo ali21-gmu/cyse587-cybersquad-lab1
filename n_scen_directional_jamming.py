@@ -92,7 +92,6 @@ def update(frame):
             # Check if the drone is within the jamming area
             distance = np.sqrt((original_message['latitude'] - jammer.jamming_center[0])**2 + 
                                (original_message['longitude'] - jammer.jamming_center[1])**2)
-            print(distance)
             if distance <= jammer.jamming_radius:
                 jammed_message, is_jammed = jammer.jam_signal(original_message)
                 if is_jammed:
