@@ -50,6 +50,8 @@ The following packages were used in the development of the project:
 
 - **matplotlib**: 3.10.1
 - **numpy**: 2.2.4
+- **pandas**: 2.2.3
+- **pillow**: 11.1.0
 - **seaborn**: 0.13.2
 
 ## How to Run the Project
@@ -58,7 +60,7 @@ The following packages were used in the development of the project:
 Ensure you have Python 3.x installed. You will also need the following libraries:
 
 ```
-pip install contourpy cycler fonttools kiwisolver matplotlib numpy packaging pandas pillow pyparsing python-dateutil pytz seaborn six tzdata
+pip install matplotlib numpy pandas pillow seaborn
 ```
 
 ### Run the Stats File
